@@ -123,8 +123,8 @@ class AccountService {
     if (!user) {
       throw new Error('No users with this data were found.')
     }
-    
-    if (token > user.token) {
+
+    if (token !== user.passwordResetToken) {
       throw new Error('Token invalid')
     }
     

@@ -28,7 +28,7 @@ class AccountController {
 
     try {
       const user = await accountService.executeForgotUserPassword(request.body)
-      return response.status(200).json({ user })
+      return response.status(200).json(user)
     } catch (error) {
       return response.status(400).json({ message: error.message })
     }
