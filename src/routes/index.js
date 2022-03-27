@@ -5,5 +5,6 @@ const routes = Router()
 
 routes.use(accountRoutes)
 routes.use(userRoutes)
+routes.get('/', (req, res) => res.json({ message: 'Hello World' }))
 
 module.exports = routes
