@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken')
-const SECRET = process.env.SECRET
+const JWT_SECRET = process.env.JWT_SECRET
 
 function generateToken (params = {}) {
-  return jwt.sign(params, SECRET, {
+  return jwt.sign(params, JWT_SECRET, {
     expiresIn: 86400,
   })
 }
